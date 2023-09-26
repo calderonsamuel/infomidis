@@ -10,7 +10,8 @@ infomidis(
   mes = ultima_data_mes(),
   departamento = NULL,
   provincia = NULL,
-  distrito = NULL
+  distrito = NULL,
+  sleep_time = 0L
 )
 }
 \arguments{
@@ -19,6 +20,8 @@ infomidis(
 \item{periodo_anual, mes}{Año y mes de los datos de consulta. Año debe especificarse en formato "YYYY" y mes en formato "MM". Se tienen datos de Octubre 2012.}
 
 \item{departamento, provincia, distrito}{Código de lugar de búsqueda. Cada uno debe especificarse en formato "00". Solo necesario si se requiere mayor nivel de detalle.}
+
+\item{sleep_time}{Time to wait between requests. Only useful when iterating over multiple calls to this function.}
 }
 \value{
 Un \verb{<tibble>} con la información consultada
